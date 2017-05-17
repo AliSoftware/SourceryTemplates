@@ -3,3 +3,4 @@ sources:
 templates:
   - "Templates"
 output: "UnitTests/Generated"
+prune: true

@@ -1,0 +1,14 @@
+{# 
+Caution: this template doesn't work if the last property of your type is a let with a default value
+(it will add an extra comma after the last parameter)
+#}
+
+{% for type in types.all %}
+// sourcery:inline:{{ type.name }}.MemberwiseInit
+  {{ type.accessLevel }} init({% for p in type.storedVariables %}{% if p.isMutable or not p.defaultValue %}{{p.name}}: {{p.typeName}}{% if p.defaultValue or p.annotations.MemberwiseDefault %} = {{p.defaultValue|default:p.annotations.MemberwiseDefault}}{% endif %}{% if not forloop.last %}, {% endif %}{% endif %}{% endfor %}) {
+    {% for p in type.storedVariables %}{% if p.isMutable or not p.defaultValue %}
+    self.{{p.name}} = {{p.name}}
+    {% endif %}{% endfor %}
+  }
+// sourcery:end
+{% endfor %}

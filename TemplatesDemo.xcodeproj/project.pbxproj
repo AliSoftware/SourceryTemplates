@@ -11,6 +11,8 @@
 		095E39871ECCAF3400F0F510 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39831ECCAF3400F0F510 /* Row.swift */; };
 		095E39881ECCAF3400F0F510 /* TypeErasureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39841ECCAF3400F0F510 /* TypeErasureTests.swift */; };
 		095E398B1ECCB19600F0F510 /* TypeErase.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E398A1ECCB19600F0F510 /* TypeErase.generated.swift */; };
+		095E39991ECD0CDA00F0F510 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39981ECD0CDA00F0F510 /* User.swift */; };
+		095E399B1ECD155A00F0F510 /* MemberwiseInitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E399A1ECD155A00F0F510 /* MemberwiseInitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		095E39831ECCAF3400F0F510 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		095E39841ECCAF3400F0F510 /* TypeErasureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeErasureTests.swift; sourceTree = "<group>"; };
 		095E398A1ECCB19600F0F510 /* TypeErase.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeErase.generated.swift; sourceTree = "<group>"; };
+		095E39981ECD0CDA00F0F510 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		095E399A1ECD155A00F0F510 /* MemberwiseInitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberwiseInitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 				095E39801ECCAF3400F0F510 /* Info.plist */,
 				095E39891ECCB19600F0F510 /* Generated */,
 				095E39811ECCAF3400F0F510 /* TypeErasure */,
+				095E39971ECD0CA500F0F510 /* MemberwiseInit */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -75,6 +80,15 @@
 				095E398A1ECCB19600F0F510 /* TypeErase.generated.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		095E39971ECD0CA500F0F510 /* MemberwiseInit */ = {
+			isa = PBXGroup;
+			children = (
+				095E39981ECD0CDA00F0F510 /* User.swift */,
+				095E399A1ECD155A00F0F510 /* MemberwiseInitTests.swift */,
+			);
+			path = MemberwiseInit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +183,8 @@
 			files = (
 				095E39881ECCAF3400F0F510 /* TypeErasureTests.swift in Sources */,
 				095E39871ECCAF3400F0F510 /* Row.swift in Sources */,
+				095E399B1ECD155A00F0F510 /* MemberwiseInitTests.swift in Sources */,
+				095E39991ECD0CDA00F0F510 /* User.swift in Sources */,
 				095E39861ECCAF3400F0F510 /* Pokemon.swift in Sources */,
 				095E398B1ECCB19600F0F510 /* TypeErase.generated.swift in Sources */,
 			);
