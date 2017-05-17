@@ -1,5 +1,5 @@
 sources:
   - "UnitTests"
 templates:
-  - "Templates/TypeErase.stencil"
+  - "Templates"
 output: "UnitTests/Generated"
