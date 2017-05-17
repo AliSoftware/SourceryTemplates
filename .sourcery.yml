@@ -1,0 +1,5 @@
+sources:
+  - "UnitTests"
+templates:
+  - "Templates/TypeErase.stencil"
+output: "UnitTests/Generated"

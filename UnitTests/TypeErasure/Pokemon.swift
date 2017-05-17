@@ -28,12 +28,3 @@ class Raichu: Pokemon {
   typealias PokemonType = Thunder
   func attack(move: Thunder) { /*⚡️*/ }
 }
-
-func test() {
-  let list: [AnyPokemon<Thunder>] = [AnyPokemon(Pikachu()), AnyPokemon(Raichu())]
-  list.forEach { (thunderPokemon: AnyPokemon<Thunder>) in
-    thunderPokemon.attack(move: Thunder())
-  }
-}
-
-
