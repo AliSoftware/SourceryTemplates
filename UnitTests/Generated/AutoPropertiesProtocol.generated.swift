@@ -14,3 +14,14 @@ extension Dependencies: ILoginManagerContainer {}
 protocol ICartManagerContainer { var cartManager: CartManager { get } }
 extension Dependencies: ICartManagerContainer {}
 
+// MARK: PropertiesProtocols for Person
+
+protocol HasName { var name: String { get } }
+extension Person: HasName {}
+
+protocol HasDetails { var details: Person.Details? { get } }
+extension Person: HasDetails {}
+
+protocol HasDogs { var dogs: [Person.Dog] { get } }
+extension Person: HasDogs {}
+

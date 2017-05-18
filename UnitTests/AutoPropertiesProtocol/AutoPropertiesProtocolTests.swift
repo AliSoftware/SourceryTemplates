@@ -28,12 +28,20 @@ class AutoPropertiesProtocolTests: XCTestCase {
     class FakeWSClient: WebServiceClient { /* … */ }
 
     let all = Dependencies(
-      webService: FakeWSClient(),
+      wsClient: FakeWSClient(),
       loginManager: LoginManager(),
       cartManager: CartManager()
     )
 
     let loginScreen = LoginScreen(deps: all)
     loginScreen.login()
+  }
+
+  func testPerson() {
+    let p = Person(name: "Bob", details: nil, dogs: [])
+    func printName(_ namable: HasName) {
+      print(namable.name)
+    }
+    printName(p)
   }
 }

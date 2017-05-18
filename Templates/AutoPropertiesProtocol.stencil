@@ -5,7 +5,7 @@
 
 {% for p in type.storedVariables %}
 {% set protoName %}{{p.annotations.PropertiesProtocolPrefix|default:"Has"}}{{p.name|titlecase}}{{p.annotations.PropertiesProtocolSuffix}}{% endset %}
-protocol {{protoName}} { var {{p.name}}: {{p.typeName}} { get } }
+protocol {{protoName}} { var {{p.name}}: {{p.actualTypeName}} { get } }
 extension {{type.name}}: {{protoName}} {}
 
 {% endfor %}

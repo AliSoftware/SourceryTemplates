@@ -17,6 +17,7 @@
 		095E39961ECD0B0100F0F510 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39951ECD0B0100F0F510 /* Dependencies.swift */; };
 		095E399D1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E399C1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift */; };
 		095E399F1ECD1B4100F0F510 /* AutoPropertiesProtocol.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E399E1ECD1B4100F0F510 /* AutoPropertiesProtocol.generated.swift */; };
+		095E39A11ECD278400F0F510 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39A01ECD278400F0F510 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		095E39951ECD0B0100F0F510 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		095E399C1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPropertiesProtocolTests.swift; sourceTree = "<group>"; };
 		095E399E1ECD1B4100F0F510 /* AutoPropertiesProtocol.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPropertiesProtocol.generated.swift; sourceTree = "<group>"; };
+		095E39A01ECD278400F0F510 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				095E39951ECD0B0100F0F510 /* Dependencies.swift */,
+				095E39A01ECD278400F0F510 /* Person.swift */,
 				095E399C1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift */,
 			);
 			path = AutoPropertiesProtocol;
@@ -209,6 +212,7 @@
 				37944B231ECD68A8002C0115 /* AutoInterface.generated.swift in Sources */,
 				095E39861ECCAF3400F0F510 /* Pokemon.swift in Sources */,
 				095E39961ECD0B0100F0F510 /* Dependencies.swift in Sources */,
+				095E39A11ECD278400F0F510 /* Person.swift in Sources */,
 				095E398B1ECCB19600F0F510 /* TypeErase.generated.swift in Sources */,
 				37944B271ECD6C0D002C0115 /* AutoInterfaceTests.swift in Sources */,
 			);

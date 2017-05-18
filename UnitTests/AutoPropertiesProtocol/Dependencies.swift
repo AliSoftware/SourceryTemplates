@@ -20,8 +20,8 @@ class Dependencies: AutoPropertiesProtocol {
   let loginManager: LoginManager
   let cartManager: CartManager
 
-  init(webService: WebServiceClient, loginManager: LoginManager, cartManager: CartManager) {
-    self.webService = webService
+  init(wsClient: WebServiceClient, loginManager: LoginManager, cartManager: CartManager) {
+    self.webServiceClient = wsClient
     self.loginManager = loginManager
     self.cartManager = cartManager
   }
