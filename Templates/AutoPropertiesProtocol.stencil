@@ -1,10 +1,9 @@
 {# Inspired by http://merowing.info/2017/04/using-protocol-compositon-for-dependency-injection/ #}
-
 {% for type in types.implementing.AutoPropertiesProtocol %}
-// MARK: PropertiesProtocols for {{type.name}}
+// MARK: {{type.name}}
 
 {% for p in type.storedVariables %}
-{% set protoName %}{{p.annotations.PropertiesProtocolPrefix|default:"Has"}}{{p.name|titlecase}}{{p.annotations.PropertiesProtocolSuffix}}{% endset %}
+{% set protoName %}{% if p.annotations.PropertiesProtocol %}{{p.annotations.PropertiesProtocol }}{% else %}{{p.annotations.PropertiesProtocolPrefix|default:"Has"}}{{p.name|titlecase}}{{p.annotations.PropertiesProtocolSuffix}}{% endif %}{% endset %}
 protocol {{protoName}} { var {{p.name}}: {{p.actualTypeName}} { get } }
 extension {{type.name}}: {{protoName}} {}
 

@@ -115,14 +115,15 @@ This pattern is typically useful to [leverage protocol composition for Dependenc
 
 * Declare a phantom protocol `protocol AutoPropertiesProtocol {}` somewhere in your code
 * Make the class you want to opt-it for this feature to conform to this phantom protocol
-* Optionally, you can annotated your properties with the `PropertiesProtocolPrefix` and/or `PropertiesProtocolSuffix` annotations to provide a custom prefix/suffix for the name of the generated protocols
+* Optionally, you can annotate your properties with the `PropertiesProtocolPrefix` and/or `PropertiesProtocolSuffix` annotations to provide a custom prefix/suffix for the name of the generated protocols
   * By default (if the annotation is not set / has no value), the prefix will be `Has` and there will be no suffix
   * Reminder: if you want _all_ the properties of your type to have the same prefix/suffix, you can use `// sourcery:begin: PropertiesProtocolPrefix = …` at the beginning of your type + `// sourcery:end` at the end to apply the same annotation(s) to all the variables inside that scope.
-* Use the template in [`Templates/AutoPropertiesProtocol.stencil`](https://github.com/AliSoftware/SourceryTemplates/blob/master/Templates/AutoPropertiesProtocol.stencil) with [Sourcery](http://github.com/krzysztofzablocki/Sourcery) to generate all the necessary protocols
+* Alternatively, you can also optionally annotate your properties with the `PropertiesProtocol` annotation to give an exact name for the protocol to generate for that property.
+* Finally, use the template in [`Templates/AutoPropertiesProtocol.stencil`](https://github.com/AliSoftware/SourceryTemplates/blob/master/Templates/AutoPropertiesProtocol.stencil) with [Sourcery](http://github.com/krzysztofzablocki/Sourcery) to generate all the necessary protocols
 
 ### Examples
 
-You can find some examples in the [`UnitTests/AutoPropertiesProtocol`](https://github.com/AliSoftware/SourceryTemplates/tree/master/UnitTests/AutoPropertiesProtocol) directory in this repo, like those:
+You can find some examples in the [`UnitTests/AutoPropertiesProtocol`](https://github.com/AliSoftware/SourceryTemplates/tree/master/UnitTests/AutoPropertiesProtocol) directory in this repo, like this one:
 
 ```swift
 // sourcery:begin: PropertiesProtocolPrefix = I, PropertiesProtocolSuffix = Container

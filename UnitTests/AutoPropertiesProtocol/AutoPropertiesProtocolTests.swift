@@ -39,8 +39,8 @@ class AutoPropertiesProtocolTests: XCTestCase {
 
   func testPerson() {
     let p = Person(name: "Bob", details: nil, dogs: [])
-    func printName(_ namable: HasName) {
-      print(namable.name)
+    func printName(_ namable: Namable & DetailsProvider) {
+      print(namable.name, namable.details?.age ?? 0)
     }
     printName(p)
   }

@@ -17,7 +17,9 @@ struct Person: AutoPropertiesProtocol {
     let name: String
     let nickname: String?
   }
+  // sourcery: PropertiesProtocol = Namable
   let name: String
+  // sourcery: PropertiesProtocolPrefix = "", PropertiesProtocolSuffix = Provider
   let details: Details?
   let dogs: [Dog]
 }

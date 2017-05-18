@@ -2,8 +2,7 @@
 // DO NOT EDIT
 
 
-
-// MARK: PropertiesProtocols for Dependencies
+// MARK: Dependencies
 
 protocol IWebServiceClientContainer { var webServiceClient: WebServiceClient { get } }
 extension Dependencies: IWebServiceClientContainer {}
@@ -14,13 +13,13 @@ extension Dependencies: ILoginManagerContainer {}
 protocol ICartManagerContainer { var cartManager: CartManager { get } }
 extension Dependencies: ICartManagerContainer {}
 
-// MARK: PropertiesProtocols for Person
+// MARK: Person
 
-protocol HasName { var name: String { get } }
-extension Person: HasName {}
+protocol Namable { var name: String { get } }
+extension Person: Namable {}
 
-protocol HasDetails { var details: Person.Details? { get } }
-extension Person: HasDetails {}
+protocol DetailsProvider { var details: Person.Details? { get } }
+extension Person: DetailsProvider {}
 
 protocol HasDogs { var dogs: [Person.Dog] { get } }
 extension Person: HasDogs {}
