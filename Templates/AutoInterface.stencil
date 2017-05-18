@@ -1,3 +1,5 @@
+import Foundation
+
 {% for type in types.implementing.AutoInterface %}
 {% set protoName %}{% if type.annotations.AutoInterface %}{{type.annotations.AutoInterface}}{% else %}{{ type.annotations.AutoInterfacePrefix|default:"I" }}{{ type.localName }}{{ type.annotations.AutoInterfaceSuffix }}{% endif %}{% endset %}
 

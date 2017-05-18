@@ -17,6 +17,8 @@ class WSClient {
       let name: String
     }
 
+    let baseURL: URL = URL(string: "https://example.com/api")!
+
     func fetchUsers() -> [User] {
       return (0..<10).map { User(id: $0, name: "User\($0)") }
     }
