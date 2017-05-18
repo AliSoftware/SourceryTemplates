@@ -1,0 +1,12 @@
+{# Inspired by http://merowing.info/2017/04/using-protocol-compositon-for-dependency-injection/ #}
+
+{% for type in types.implementing.AutoPropertiesProtocol %}
+// MARK: PropertiesProtocols for {{type.name}}
+
+{% for p in type.storedVariables %}
+{% set protoName %}{{p.annotations.PropertiesProtocolPrefix|default:"Has"}}{{p.name|titlecase}}{{p.annotations.PropertiesProtocolSuffix}}{% endset %}
+protocol {{protoName}} { var {{p.name}}: {{p.typeName}} { get } }
+extension {{type.name}}: {{protoName}} {}
+
+{% endfor %}
+{% endfor %}
