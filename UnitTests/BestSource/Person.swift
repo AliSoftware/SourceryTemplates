@@ -13,6 +13,10 @@ import Foundation
 struct Address {
   let street: String
   let zipcode: String
+  init(street: String, zipcode: String) {
+    self.street = street
+    self.zipcode = zipcode
+  }
 }
 
 class Person {
@@ -20,6 +24,7 @@ class Person {
   let lastName: String
   var dob: Date?
   var address: Address? = nil
+  var dog: Dog?
 
   init(firstName: String, lastName: String) {
     self.firstName = firstName
@@ -30,11 +35,9 @@ class Person {
     return self.dob.flatMap({ Calendar.current.dateComponents([.year], from: $0, to: Date()).year })
   }
 
-  var dog: Dog?
-
   func callDog(makeItBark: Bool) -> Bool {
     if let dog = dog {
-      if makeItBark { dog.bark(times: 3) }
+      dog.bark(times: 1)
       return true
     } else {
       return false

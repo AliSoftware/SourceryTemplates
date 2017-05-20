@@ -5,45 +5,45 @@ import Foundation
 
 protocol Tasteless {
   associatedtype NachoType
-  var nacho: NachoType { get }
+  var butBetter: NachoType { get }
 }
 protocol Nacho {
   associatedtype TastelessType
   var tasteless: TastelessType { get }
 }
 
-// MARK: Nachoify Foundation
+// MARK: Nacho-ify Foundation
 
 typealias BestVoid = Void
 typealias BestInt = Int
 extension Int: Nacho, Tasteless {
   var tasteless: Int { return self }
-  var nacho: Int { return self }
+  var butBetter: Int { return self }
 }
 typealias BestDouble = Double
 extension Double: Nacho, Tasteless {
   var tasteless: Double { return self }
-  var nacho: Double { return self }
+  var butBetter: Double { return self }
 }
 typealias BestString = String
 extension String: Nacho, Tasteless {
   var tasteless: String { return self }
-  var nacho: String { return self }
+  var butBetter: String { return self }
 }
 typealias BestBool = Bool
 extension Bool: Nacho, Tasteless {
   var tasteless: Bool { return self }
-  var nacho: Bool { return self }
+  var butBetter: Bool { return self }
 }
 typealias BestData = Data
 extension Data: Nacho, Tasteless {
   var tasteless: Data { return self }
-  var nacho: Data { return self }
+  var butBetter: Data { return self }
 }
 typealias BestDate = Date
 extension Date: Nacho, Tasteless {
   var tasteless: Date { return self }
-  var nacho: Date { return self }
+  var butBetter: Date { return self }
 }
 
 
@@ -53,23 +53,26 @@ extension Date: Nacho, Tasteless {
 
 internal struct BestAddress: Nacho {
   let tasteless: Address
-  fileprivate init(tasteless: Address) { self.tasteless = tasteless }
+  init(tasteless: Address) { self.tasteless = tasteless }
 
   // MARK: Typealiases	
 
   // MARK: Methods
+  internal init(bestStreet street: BestString, bestZipcode zipcode: BestString)  {
+    self.tasteless = Address(street: street, zipcode: zipcode)
+  }
 
   // MARK: Variables
-  var bestStreet: String {
-    get { return tasteless.street }
+  var bestStreet: BestString {
+    get { return tasteless.street.butBetter }
   }
-  var bestZipcode: String {
-    get { return tasteless.zipcode }
+  var bestZipcode: BestString {
+    get { return tasteless.zipcode.butBetter }
   }
 }
 
 extension Address: Tasteless {
-	var nacho: BestAddress { return BestAddress(tasteless: self) }
+	var butBetter: BestAddress { return BestAddress(tasteless: self) }
 }
 
 ////////////////////////////////////////////////
@@ -77,7 +80,7 @@ extension Address: Tasteless {
 
 internal class BestDog: Nacho {
   let tasteless: Dog
-  fileprivate init(tasteless: Dog) { self.tasteless = tasteless }
+  init(tasteless: Dog) { self.tasteless = tasteless }
 
   // MARK: Typealiases	
 
@@ -91,13 +94,13 @@ internal class BestDog: Nacho {
   }
 
   // MARK: Variables
-  var bestNickname: String {
-    get { return tasteless.nickname }
+  var bestNickname: BestString {
+    get { return tasteless.nickname.butBetter }
   }
 }
 
 extension Dog: Tasteless {
-	var nacho: BestDog { return BestDog(tasteless: self) }
+	var butBetter: BestDog { return BestDog(tasteless: self) }
 }
 
 ////////////////////////////////////////////////
@@ -105,7 +108,7 @@ extension Dog: Tasteless {
 
 internal class BestPerson: Nacho {
   let tasteless: Person
-  fileprivate init(tasteless: Person) { self.tasteless = tasteless }
+  init(tasteless: Person) { self.tasteless = tasteless }
 
   // MARK: Typealiases	
 
@@ -115,30 +118,30 @@ internal class BestPerson: Nacho {
   }
   internal func bestCallDog(bestMakeItBark makeItBark: BestBool) -> BestBool {
     let ret: BestBool = tasteless.callDog(makeItBark: makeItBark)
-    return ret.nacho
+    return ret.butBetter
   }
 
   // MARK: Variables
-  var bestFirstName: String {
-    get { return tasteless.firstName }
+  var bestFirstName: BestString {
+    get { return tasteless.firstName.butBetter }
   }
-  var bestLastName: String {
-    get { return tasteless.lastName }
+  var bestLastName: BestString {
+    get { return tasteless.lastName.butBetter }
   }
-  var bestDob: Date? {
-    get { return tasteless.dob }
-    set { tasteless.dob = newValue }
+  var bestDob: BestDate? {
+    get { return tasteless.dob?.butBetter }
+    set { tasteless.dob = newValue?.tasteless }
   }
-  var bestAddress: Address? {
-    get { return tasteless.address }
-    set { tasteless.address = newValue }
+  var bestAddress: BestAddress? {
+    get { return tasteless.address?.butBetter }
+    set { tasteless.address = newValue?.tasteless }
   }
-  var bestDog: Dog? {
-    get { return tasteless.dog }
-    set { tasteless.dog = newValue }
+  var bestDog: BestDog? {
+    get { return tasteless.dog?.butBetter }
+    set { tasteless.dog = newValue?.tasteless }
   }
 }
 
 extension Person: Tasteless {
-	var nacho: BestPerson { return BestPerson(tasteless: self) }
+	var butBetter: BestPerson { return BestPerson(tasteless: self) }
 }
