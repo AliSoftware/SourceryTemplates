@@ -1,0 +1,90 @@
+import Foundation
+
+protocol Tasteless {
+  associatedtype NachoType
+  var nacho: NachoType { get }
+}
+protocol Nacho {
+  associatedtype TastelessType
+  var tasteless: TastelessType { get }
+}
+
+// MARK: Nachoify Foundation
+
+typealias BestVoid = Void
+typealias BestInt = Int
+extension Int: Nacho, Tasteless {
+  var tasteless: Int { return self }
+  var nacho: Int { return self }
+}
+typealias BestDouble = Double
+extension Double: Nacho, Tasteless {
+  var tasteless: Double { return self }
+  var nacho: Double { return self }
+}
+typealias BestString = String
+extension String: Nacho, Tasteless {
+  var tasteless: String { return self }
+  var nacho: String { return self }
+}
+typealias BestBool = Bool
+extension Bool: Nacho, Tasteless {
+  var tasteless: Bool { return self }
+  var nacho: Bool { return self }
+}
+typealias BestData = Data
+extension Data: Nacho, Tasteless {
+  var tasteless: Data { return self }
+  var nacho: Data { return self }
+}
+typealias BestDate = Date
+extension Date: Nacho, Tasteless {
+  var tasteless: Date { return self }
+  var nacho: Date { return self }
+}
+
+
+{% for type in types.all|annotated:"BestSource" %}
+
+////////////////////////////////////////////////
+// MARK: - {{type.name}}
+
+{{ type.accessLevel }} {{type.kind}} Best{{type.name}}: {{ type.inheritedTypes|join}}{% if type.inheritedTypes %}, {% endif %}Nacho {
+  let tasteless: {{type.name}}
+  fileprivate init(tasteless: {{type.name}}) { self.tasteless = tasteless }
+
+  // MARK: Typealiases	
+  {% for ta in type.typealiases %}
+  typealias {{ta.aliasName}} = {{ta.typeName}}
+  {% endfor %}
+
+  // MARK: Methods
+  {% for m in type.methods %}
+  {% set throw %}{% if m.throws %}throws {% endif %}{% if m.rethrows %}rethrows {% endif %}{% endset %}
+  {% if m.isInitializer %}
+  {{m.accessLevel}} init({% for p in m.parameters %}{% if p.argumentLabel %}best{{p.argumentLabel|titlecase}} {% endif %}{{p.name}}: Best{{p.typeName}}{% if not forloop.last %}, {% endif %}{% endfor %}) {{throw}} {
+    self.tasteless = {% if m.throws or m.rethrows %}try {% endif %}{{type.name}}({% for p in m.parameters %}{% if p.argumentLabel %}{{p.argumentLabel}}: {% endif %}{{p.name}}{% if not forloop.last %}, {% endif %}{% endfor %})
+  }
+  {% else %}
+  {% set sc %}{% if m.isStatic %}static {% endif %}{% if m.isClass %}class {% endif %}{% endset %}
+  {% set retType %}Best{{m.returnType.name|default:m.actualReturnTypeName}}{% endset %}
+  {{m.accessLevel}} {{sc}}func best{{m.shortName|titlecase}}({% for p in m.parameters %}{% if p.argumentLabel %}best{{p.argumentLabel|titlecase}} {% endif %}{{p.name}}: Best{{p.typeName}}{% if not forloop.last %}, {% endif %}{% endfor %}) {{throw}}-> {{retType}} {
+    let ret: {{retType}} = {% if m.throws or m.rethrows %}try {% endif %}tasteless.{{m.callName}}({% for p in m.parameters %}{% if p.argumentLabel %}{{p.argumentLabel}}: {% endif %}{{p.name}}{% if not forloop.last %}, {% endif %}{% endfor %})
+    return {% if retType == "BestVoid" %}ret{% else %}ret.nacho{% endif %}
+  }
+  {% endif %}
+  {% endfor %}
+
+  // MARK: Variables
+  {% for v in type.storedVariables %}
+  var best{{v.name|titlecase}}: {{v.actualTypeName}} {
+    get { return tasteless.{{v.name}} }
+    {% if v.isMutable %}set { tasteless.{{v.name}} = newValue }{% endif %}
+  }
+  {% endfor %}
+}
+
+extension {{type.name}}: Tasteless {
+	var nacho: Best{{type.name}} { return Best{{type.name}}(tasteless: self) }
+}
+{% endfor %}
