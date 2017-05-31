@@ -1,0 +1,18 @@
+import Foundation
+
+{% for type in types.implementing.AutoInterface %}
+{% set protoName %}{% if type.annotations.AutoInterface %}{{type.annotations.AutoInterface}}{% else %}{{ type.annotations.AutoInterfacePrefix|default:"I" }}{{ type.localName }}{{ type.annotations.AutoInterfaceSuffix }}{% endif %}{% endset %}
+
+// MARK: {{ protoName }}
+
+protocol {{ protoName }} {
+	{% for p in type.variables %}
+	var {{ p.name }}: {{ p.actualTypeName }} { get{% if p.isMutable %} set{% endif %} }
+	{% endfor %}
+	{% for m in type.methods %}
+	func {{ m.name }} -> {{ m.actualReturnTypeName }}
+	{% endfor %}
+}
+extension {{ type.name }}: {{ protoName }} {}
+
+{% endfor %}
