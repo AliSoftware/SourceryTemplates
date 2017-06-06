@@ -14,6 +14,9 @@
 		37944B231ECD68A8002C0115 /* AutoInterface.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B221ECD68A8002C0115 /* AutoInterface.generated.swift */; };
 		37944B251ECD68B7002C0115 /* WSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B241ECD68B7002C0115 /* WSClient.swift */; };
 		37944B271ECD6C0D002C0115 /* AutoInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */; };
+		37FBA55D1EE746F9003974A4 /* AutoKeyPathSchemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA55C1EE746F9003974A4 /* AutoKeyPathSchemaTests.swift */; };
+		37FBA55F1EE7473B003974A4 /* Rect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA55E1EE7473B003974A4 /* Rect.swift */; };
+		37FBA5611EE74883003974A4 /* AutoKeyPathSchema.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37FBA5601EE74883003974A4 /* AutoKeyPathSchema.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		37944B221ECD68A8002C0115 /* AutoInterface.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInterface.generated.swift; sourceTree = "<group>"; };
 		37944B241ECD68B7002C0115 /* WSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSClient.swift; sourceTree = "<group>"; };
 		37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInterfaceTests.swift; sourceTree = "<group>"; };
+		37FBA55C1EE746F9003974A4 /* AutoKeyPathSchemaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoKeyPathSchemaTests.swift; sourceTree = "<group>"; };
+		37FBA55E1EE7473B003974A4 /* Rect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rect.swift; sourceTree = "<group>"; };
+		37FBA5601EE74883003974A4 /* AutoKeyPathSchema.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoKeyPathSchema.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 				095E39891ECCB19600F0F510 /* Generated */,
 				095E39811ECCAF3400F0F510 /* TypeErasure */,
 				37944B211ECD67CB002C0115 /* AutoInterface */,
+				37FBA55B1EE746B9003974A4 /* AutoKeyPathSchema */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -81,6 +88,7 @@
 			children = (
 				095E398A1ECCB19600F0F510 /* TypeErase.generated.swift */,
 				37944B221ECD68A8002C0115 /* AutoInterface.generated.swift */,
+				37FBA5601EE74883003974A4 /* AutoKeyPathSchema.generated.swift */,
 			);
 			path = Generated;
 			sourceTree = "<group>";
@@ -92,6 +100,15 @@
 				37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */,
 			);
 			path = AutoInterface;
+			sourceTree = "<group>";
+		};
+		37FBA55B1EE746B9003974A4 /* AutoKeyPathSchema */ = {
+			isa = PBXGroup;
+			children = (
+				37FBA55E1EE7473B003974A4 /* Rect.swift */,
+				37FBA55C1EE746F9003974A4 /* AutoKeyPathSchemaTests.swift */,
+			);
+			path = AutoKeyPathSchema;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +202,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				095E39881ECCAF3400F0F510 /* TypeErasureTests.swift in Sources */,
+				37FBA5611EE74883003974A4 /* AutoKeyPathSchema.generated.swift in Sources */,
 				095E39871ECCAF3400F0F510 /* Row.swift in Sources */,
+				37FBA55D1EE746F9003974A4 /* AutoKeyPathSchemaTests.swift in Sources */,
 				37944B251ECD68B7002C0115 /* WSClient.swift in Sources */,
 				37944B231ECD68A8002C0115 /* AutoInterface.generated.swift in Sources */,
+				37FBA55F1EE7473B003974A4 /* Rect.swift in Sources */,
 				095E39861ECCAF3400F0F510 /* Pokemon.swift in Sources */,
 				095E398B1ECCB19600F0F510 /* TypeErase.generated.swift in Sources */,
 				37944B271ECD6C0D002C0115 /* AutoInterfaceTests.swift in Sources */,
@@ -302,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.TemplatesDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -315,7 +335,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.TemplatesDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
