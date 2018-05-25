@@ -11,13 +11,13 @@
 		095E39871ECCAF3400F0F510 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39831ECCAF3400F0F510 /* Row.swift */; };
 		095E39881ECCAF3400F0F510 /* TypeErasureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39841ECCAF3400F0F510 /* TypeErasureTests.swift */; };
 		095E398B1ECCB19600F0F510 /* TypeErase.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E398A1ECCB19600F0F510 /* TypeErase.generated.swift */; };
-		37944B231ECD68A8002C0115 /* AutoInterface.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B221ECD68A8002C0115 /* AutoInterface.generated.swift */; };
-		37944B251ECD68B7002C0115 /* WSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B241ECD68B7002C0115 /* WSClient.swift */; };
-		37944B271ECD6C0D002C0115 /* AutoInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */; };
 		095E39961ECD0B0100F0F510 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39951ECD0B0100F0F510 /* Dependencies.swift */; };
 		095E399D1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E399C1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift */; };
 		095E399F1ECD1B4100F0F510 /* AutoPropertiesProtocol.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E399E1ECD1B4100F0F510 /* AutoPropertiesProtocol.generated.swift */; };
 		095E39A11ECD278400F0F510 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095E39A01ECD278400F0F510 /* Person.swift */; };
+		37944B231ECD68A8002C0115 /* AutoInterface.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B221ECD68A8002C0115 /* AutoInterface.generated.swift */; };
+		37944B251ECD68B7002C0115 /* WSClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B241ECD68B7002C0115 /* WSClient.swift */; };
+		37944B271ECD6C0D002C0115 /* AutoInterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,13 +27,13 @@
 		095E39831ECCAF3400F0F510 /* Row.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
 		095E39841ECCAF3400F0F510 /* TypeErasureTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeErasureTests.swift; sourceTree = "<group>"; };
 		095E398A1ECCB19600F0F510 /* TypeErase.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeErase.generated.swift; sourceTree = "<group>"; };
-		37944B221ECD68A8002C0115 /* AutoInterface.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInterface.generated.swift; sourceTree = "<group>"; };
-		37944B241ECD68B7002C0115 /* WSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSClient.swift; sourceTree = "<group>"; };
-		37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInterfaceTests.swift; sourceTree = "<group>"; };
 		095E39951ECD0B0100F0F510 /* Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		095E399C1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPropertiesProtocolTests.swift; sourceTree = "<group>"; };
 		095E399E1ECD1B4100F0F510 /* AutoPropertiesProtocol.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoPropertiesProtocol.generated.swift; sourceTree = "<group>"; };
 		095E39A01ECD278400F0F510 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		37944B221ECD68A8002C0115 /* AutoInterface.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInterface.generated.swift; sourceTree = "<group>"; };
+		37944B241ECD68B7002C0115 /* WSClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WSClient.swift; sourceTree = "<group>"; };
+		37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoInterfaceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,15 +95,6 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
-		37944B211ECD67CB002C0115 /* AutoInterface */ = {
-			isa = PBXGroup;
-			children = (
-				37944B241ECD68B7002C0115 /* WSClient.swift */,
-				37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */,
-			);
-			path = AutoInterface;
-			sourceTree = "<group>";
-		};
 		095E39941ECD0AD300F0F510 /* AutoPropertiesProtocol */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +103,15 @@
 				095E399C1ECD18CB00F0F510 /* AutoPropertiesProtocolTests.swift */,
 			);
 			path = AutoPropertiesProtocol;
+			sourceTree = "<group>";
+		};
+		37944B211ECD67CB002C0115 /* AutoInterface */ = {
+			isa = PBXGroup;
+			children = (
+				37944B241ECD68B7002C0115 /* WSClient.swift */,
+				37944B261ECD6C0D002C0115 /* AutoInterfaceTests.swift */,
+			);
+			path = AutoInterface;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,13 +142,13 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = AliSoftware;
 				TargetAttributes = {
 					095E396E1ECCAE0E00F0F510 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = YC775YC6LJ;
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -231,15 +231,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -282,15 +290,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -326,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.TemplatesDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -339,7 +355,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alisoftware.TemplatesDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
