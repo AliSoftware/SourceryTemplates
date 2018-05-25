@@ -4,6 +4,14 @@ This repository contains some templates (in the `Templates/` directory) to use f
 
 You can see them in action by opening the `TemplatesDemo.xcodeproj` Xcode project: its `UnitTests` target contains some use case examples for each template, and some code using the generated code in each associated `XCTestCase`.
 
+- [Type Erasure](#type-erasure)
+- [AutoInterface](#autointerface): _Generate protocols matching an API_
+- [AutoPropertiesProtocol](#autopropertiesprotocol): _Ideal to use Protocol Composition for Dependency Injection_
+- [AutoCaseName](#autocasename): _To be able to compare enums with associated values regardless of their payloads_
+- [Other templates](#other-templates): _link to places where you can find other templates_
+
+---
+
 ## Type Erasure
 
 This template provides type erasure to any protocol you annotated accordingly.
