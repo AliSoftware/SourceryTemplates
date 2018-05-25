@@ -7,9 +7,9 @@ import Foundation
 // MARK: ProductsProvider
 
 protocol ProductsProvider {
-	var lastError: Error? { get set }
-	var errored: Bool { get }
-	func fetchProducts() -> [WSClient.ProductsWSClient.Product]
+    var lastError: Error? { get set }
+    var errored: Bool { get }
+    func fetchProducts() -> [WSClient.ProductsWSClient.Product]
 }
 extension WSClient.ProductsWSClient: ProductsProvider {}
 
@@ -17,9 +17,9 @@ extension WSClient.ProductsWSClient: ProductsProvider {}
 // MARK: IUserWSClient
 
 protocol IUserWSClient {
-	var baseURL: URL { get }
-	func fetchUsers() -> [WSClient.UserWSClient.User]
-	func fetchUser(id: Int) -> WSClient.UserWSClient.User?
+    var baseURL: URL { get }
+    func fetchUsers() -> [WSClient.UserWSClient.User]
+    func fetchUser(id: Int) -> WSClient.UserWSClient.User?
 }
 extension WSClient.UserWSClient: IUserWSClient {}
 
