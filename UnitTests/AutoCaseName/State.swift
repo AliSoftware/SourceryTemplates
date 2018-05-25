@@ -13,9 +13,4 @@ enum State: AutoCaseName {
   case loading(message: String, percent: Double)
   case loaded(data: [String])
   case error(message: String, code: Int)
-  case requires2FACode(code: String)
-}
-
-struct Invalid: AutoCaseName {
-  var foo: Int
 }

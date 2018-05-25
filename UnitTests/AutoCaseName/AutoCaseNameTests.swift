@@ -22,9 +22,6 @@ class AutoCaseNameTests: XCTestCase {
 
     let state4 = State.error(message: "Server Error", code: 500)
     XCTAssertEqual(state4.caseName, .error)
-
-    let state5 = State.requires2FACode(code: "1234")
-    XCTAssertEqual(state5.caseName, .requires2FACode)
   }
 
   func testSyntaxes() {
@@ -34,7 +31,16 @@ class AutoCaseNameTests: XCTestCase {
       return
     }
 
-    XCTAssert(state.caseName != .requires2FACode)
+    XCTAssert(state.caseName != .loaded)
     XCTAssertEqual(state.caseName.rawValue, "loading")
+  }
+
+  func testComparable() {
+    let state1: State = State.loading(message: "Loading Data…", percent: 0.42)
+    let state2: State = State.loading(message: "Loading…", percent: 0.1337)
+    let state3: State = State.notLoaded
+
+    XCTAssertEqual(state1.caseName, state2.caseName)
+    XCTAssertNotEqual(state1.caseName, state3.caseName)
   }
 }

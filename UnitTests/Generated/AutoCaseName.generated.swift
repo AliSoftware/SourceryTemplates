@@ -10,7 +10,6 @@ extension State {
         case loading
         case loaded
         case error
-        case requires2FACode
     }
     var caseName: CaseName {
         switch self {
@@ -18,7 +17,6 @@ extension State {
         case .loading: return .loading
         case .loaded: return .loaded
         case .error: return .error
-        case .requires2FACode: return .requires2FACode
         }
     }
 }
