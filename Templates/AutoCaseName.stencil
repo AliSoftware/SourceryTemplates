@@ -1,8 +1,7 @@
-
 {% for type in types.implementing.AutoCaseName|enum %}
 // MARK: {{type.name}}
 
-extension {{type.name}} {
+{{type.accessLevel}} extension {{type.name}} {
     enum CaseName: String {
     {% for p in type.cases %}
         case {{p.name}}
