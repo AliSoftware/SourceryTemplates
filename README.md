@@ -54,7 +54,7 @@ This is a first draft of the template, so please don't hesitate to improve it.
 
 I haven't tested a lot of real-world use cases yet so some corner cases are probably missing but feel free to submit a PR to fix them!
 
-The template generates the same code structure as the one explained in [this BigNerdRanch article](https://www.bignerdranch.com/blog/breaking-down-type-erasures-in-swift/) that inspired me to come up with a working template.
+The template generates the same code structure as the one explained in [this BigNerdRanch article](https://www.bignerdranch.com/blog/breaking-down-type-erasure-in-swift/) that inspired me to come up with a working template.
 
 You can also find more information about Type-Erasure by watching [Gwendolyn's talk at Try! Swift](https://news.realm.io/news/tryswift-gwendolyn-weston-type-erasure/) — from which I borrowed the Pokemon examples to test that template.
 
